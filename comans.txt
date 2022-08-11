@@ -1,0 +1,7 @@
+Crear imagen = docker build -t terraform_python .
+Crear container = docker run  -t -d --rm --name terraform_python -w /home/dev -v ${PWD}:/home/dev terraform_python
+crear volumen  = docker volume create terraform_python_volume
+Detener container = docker stop terraform_python
+
+iniciar terraform = terraform init
+ejecutar terraform = terraform plan
