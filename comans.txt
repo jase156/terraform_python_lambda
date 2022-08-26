@@ -1,7 +1,11 @@
 Crear imagen = docker build -t terraform_python .
+crear imagen custom name = docker build -t lambda_local_custom . --file lambda_custom.DockerFile
 Crear container = docker run  -t -d --rm --name terraform_python -w /home/dev -v ${PWD}:/home/dev terraform_python
 crear volumen  = docker volume create terraform_python_volume
 Detener container = docker stop terraform_python
 
 iniciar terraform = terraform init
 ejecutar terraform = terraform plan
+
+
+ddocker run  -t -d --rm --name lambda_local_custom -p 9000:8080 lambda_local_custom
